@@ -3,3 +3,5 @@ build
 remedybg
 debug.txt
 debug_memory.txt
+bin/msvc/gcsr_engine_core_tmp.dll
+bin/clang/gcsr_engine_core_tmp.dll
