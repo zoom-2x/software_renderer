@@ -1,0 +1,196 @@
+{
+    "settings":
+    {
+        "name": "Chest",
+
+        "shader": 5,
+        "program": 6,
+
+        "program_settings": {
+            "min_radius": 2.0,
+            "max_radius": 3.5,
+            "min_height": -0.5,
+            "max_height": 1.5,
+            "rotation_speed": 20.0,
+            "radius_speed": 8.0,
+            "height_speed": 9.0,
+            "angle_offset": -60.0
+        },
+
+        "background_color": [0.1, 0.1, 0.1, 1.0],
+        "wireframe_color": [0.407, 0.976, 1.0, 0.20],
+        "ambient_color": [0.353, 0.168, 0.160, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_grid": false,
+        "debug_lights": false,
+
+        "tone_mapping1": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping": "aces_aprox",
+
+        "camera": {
+            "type": "focus",
+            "eye": [0.0, -2.5, 2.0],
+            "target": [0.0, 0.0, 0.0],
+            "wheel_sens": 0.2,
+            "projection": "perspective",
+            "fov": 50,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": -1.0,
+            "near": 0.1,
+            "far": 40.0
+        },
+
+        "postprocessing": {
+            "enabled": false,
+            "tint": [1.2, 1.2, 1.35]
+        },
+
+        "flags": {
+            "shadow": false,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_solid": false,
+            "mode_material": false
+        }
+    },
+
+    "packages": [
+        "data/assets/textures/chest.pkg",
+        "data/assets/meshes/chest.pkg"
+    ],
+
+    "textures": [
+        {
+            "id": 0,
+            "name": "textures/chest/albedo",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+        {
+            "id": 1,
+            "name": "textures/chest/normal",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+        {
+            "id": 2,
+            "name": "textures/chest/roughness",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+        {
+            "id": 3,
+            "name": "textures/chest/ao",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        }
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/chest/chest" },
+        { "id": 1, "name": "meshes/chest/chest_lines" }
+    ],
+
+    "materials": [
+        {
+            "type": "blinn",
+            "name": "basic material",
+            "maps": {
+                "diffuse": 0,
+                "normal": 1,
+                "specular": 2,
+                "ao": 3
+            },
+            "components": ["diffuse", "normal", "specular", "ao", "fresnel"],
+            "settings": {
+                "specular": 0.8,
+                "shininess": 1000.0,
+                "diffuse_color": [1.0, 1.0, 1.0, 1.0],
+                "min_fresnel": 0.75,
+                "max_fresnel": 20.0
+            }
+        }
+    ],
+
+    "models": [
+        {
+            "mesh": 0,
+            "mesh_lines": 1,
+            "material": 0,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun1",
+            "rotation": [0.0, 45.0, 50.0],
+            "color": [1.0, 1.0, 1.0, 1.0],
+            "il": 4.0,
+
+            "shadow": {
+                "camera_distance": 10.0,
+                "camera_fov": 3.0,
+                "f_near": 1.0,
+                "f_far": 50.0,
+                "type": "pcf_3x3_linear",
+                "normal_offset": 0.009,
+                "depth_bias": 0.0002,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point",
+            "position": [-2.0, 1.5, 1.0],
+            "color": [0.5, 0.8, 1.0, 1.0],
+            "il": 20.0,
+
+            "kc": 1,
+            "kl": 1,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point",
+            "position": [1.0, -1.5, 1.8],
+            "color": [0.8, 0.6, 0.65, 1.0],
+            "il": 30.0,
+
+            "kc": 1,
+            "kl": 1,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        }
+    ]
+}

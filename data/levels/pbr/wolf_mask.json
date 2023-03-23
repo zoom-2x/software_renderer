@@ -1,0 +1,213 @@
+{
+    "settings":
+    {
+        "name": "Wolf mask",
+
+        "shader": 6,
+        "program": 6,
+
+        "program_settings": {
+            "min_radius": 3.5,
+            "max_radius": 4.5,
+            "min_height": -0.5,
+            "max_height": 2.5,
+            "rotation_speed": 10.0,
+            "radius_speed": 8.0,
+            "height_speed": 12.0,
+            "angle_offset": -60.0
+        },
+
+        "background_color1": [0.5, 0.5, 0.52, 1.0],
+        "background_color": [0.12, 0.1, 0.1, 1.0],
+        "wireframe_color": [0.407, 0.976, 1.0, 0.55],
+        "wireframe_color1": [1.0, 1.0, 1.0, 1.0],
+        "ambient_color": [0.2, 0.2, 0.3, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_grid": false,
+        "debug_lights": false,
+
+        "tone_mapping1": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping": "aces_aprox",
+
+        "camera": {
+            "type": "focus",
+            "eye": [0.0, 8.0, 2.0],
+            "target": [0.0, 1.0, -1.0],
+            "wheel_sens": 0.2,
+            "projection": "perspective",
+            "fov": 50,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": -1.0,
+            "near": 0.1,
+            "far": 40.0
+        },
+
+        "postprocessing": {
+            "enabled": false,
+            "tint": [1.2, 1.2, 1.2],
+            "saturation": 1.5
+        },
+
+        "flags": {
+            "shadow": false,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_material": false,
+            "mode_solid": false
+        }
+    },
+
+    "packages": [
+        "data/assets/textures/hdr_venice.pkg",
+        "data/assets/textures/hdr_newport.pkg",
+        "data/assets/meshes/wolf_mask.pkg",
+        "data/assets/meshes/shapes.pkg"
+    ],
+
+    "textures": [
+        {
+            "id": 0,
+            "type": "pbr_ambient",
+            "comment": "You can switch between the two hdr ambients.",
+            "name": "textures/hdr_venice/venice_sunset",
+            "name1": "textures/hdr_newport/newport_loft",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true,
+            "max_mip": 4
+        }
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/wolf_mask/wolf_mask" },
+        { "id": 1, "name": "meshes/shapes/skybox" },
+        { "id": 2, "name": "meshes/wolf_mask/wolf_mask_lines" },
+        { "id": 3, "name": "meshes/wolf_mask/wolf_mask_points" }
+    ],
+
+    "materials": [
+        {
+            "id": 0,
+            "type": "pbr",
+            "name": "helmet material",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["albedo", "roughness", "metalness", "ambient"],
+            "settings": {
+                "albedo1": [0.0, 0.0, 0.0],
+                "albedo1": [1.0, 1.0, 1.0],
+                "albedo1": [0.3, 0.25, 0.4],
+                "albedo1": [0.562, 0.136, 0.068],
+                "albedo1": [0.671, 0.454, 0.004],
+                "albedo": [0.481, 0.232, 0.091],
+                "metalness": 0.95,
+                "roughness": 0.45,
+                "ao": 1.0,
+                "f0": [0.8, 0.8, 0.9],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "opacity": 0.5,
+                "transparency": false
+            }
+        },
+        {
+            "id": 1,
+            "type": "skybox",
+            "name": "skybox material",
+            "input": 0
+        }
+    ],
+
+    "models": [
+        {
+            "mesh": 0,
+            "mesh_lines": 2,
+            "mesh_points": 3,
+            "material": 0,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 160.0],
+            "scaling": [0.5, 0.5, 0.5]
+        },
+
+        {
+            "name": "skybox",
+            "mesh": 1,
+            "material": 1,
+            "shader": 13,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [4.0, 4.0, 4.0]
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun1",
+            "rotation": [0.0, 45.0, 45.0],
+            "color": [0.9, 0.9, 1.0, 1.0],
+            "il": 10.0,
+
+            "shadow": {
+                "camera_distance": 20.0,
+                "camera_fov": 5.0,
+                "f_near": 1.0,
+                "f_far": 100.0,
+                "type": "pcf_3x3_linear",
+                "normal_offset": 0.009,
+                "depth_bias": 0.0002,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [5.0, 5.0, 1.5],
+            "color": [1.0, 0.858, 0.622, 1.0],
+            "il": 100.0,
+
+            "kc": 1,
+            "kl": 0.5,
+            "kq": 0.2,
+
+            "shadow": {
+                "type": "basic",
+                "f_near": 1.0,
+                "f_far": 100.0,
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [-5.0, 7.0, 0.8],
+            "color": [1.0, 0.755, 0.658, 1.0],
+            "il": 100.0,
+
+            "kc": 1,
+            "kl": 0.5,
+            "kq": 0.2,
+
+            "shadow": {
+                "type": "basic",
+                "f_near": 1.0,
+                "f_far": 100.0,
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        }
+    ]
+}

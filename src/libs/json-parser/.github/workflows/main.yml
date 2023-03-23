@@ -1,0 +1,111 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  # Allows running this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build-gcc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build json.c as C89 without JSON_TRACK_SOURCE
+        run: c89 -ansi -Wall -Wpedantic -Werror -pedantic -pedantic-errors -D_ANSI_SOURCE -shared json.c -lm -o json-c89-notrack
+
+      - name: Build json.c as C89
+        run: c89 -ansi -Wall -Wpedantic -Werror -pedantic -pedantic-errors -D_ANSI_SOURCE -DJSON_TRACK_SOURCE -shared json.c -lm -o json-c89
+
+      - name: Build json.c as C99
+        run: gcc -std=c99 -Wall -Wpedantic -Werror -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared json.c -lm -o json-c99
+
+      - name: Build json.c as C11
+        run: gcc -std=c11 -Wall -Wpedantic -Werror -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared json.c -lm -o json-c11
+
+      - name: Build json.c as C17
+        run: gcc -std=c17 -Wall -Wpedantic -Werror -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared json.c -lm -o json-c17
+
+      - name: Build json.c as C17 with unused parameters as errors
+        run: gcc -std=c17 -Wall -Wpedantic -Werror -Werror=unused-parameter -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared json.c -lm -o json-c17-unused
+
+      - name: Build json.c as C2x
+        run: gcc -std=c2x -Wall -Wpedantic -Werror -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared json.c -lm -o json-c2x
+
+      - name: Build json.c as C++98
+        run: g++ -std=c++98 -Wall -Wpedantic -Werror -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared -fPIC -x c++ json.c -lm -o json-cpp98
+
+      - name: Build json.c as C++11
+        run: g++ -std=c++11 -Wall -Wpedantic -Werror -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared -fPIC -x c++ json.c -lm -o json-cpp11
+
+      - name: Build json.c as C++14
+        run: g++ -std=c++14 -Wall -Wpedantic -Werror -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared -fPIC -x c++ json.c -lm -o json-cpp14
+
+      - name: Build json.c as C++17
+        run: g++ -std=c++17 -Wall -Wpedantic -Werror -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared -fPIC -x c++ json.c -lm -o json-cpp17
+
+      - name: Build json.c as C++2a
+        run: g++ -std=c++2a -Wall -Wpedantic -Werror -pedantic -pedantic-errors -DJSON_TRACK_SOURCE -shared -fPIC -x c++ json.c -lm -o json-cpp2a
+
+      - name: Build examples
+        run: |
+          c89 -ansi -Wall -Wpedantic -Werror -pedantic -pedantic-errors -D_ANSI_SOURCE -DJSON_TRACK_SOURCE -I. json.c examples/test_json.c -lm -o json-example0
+
+      - name: Build and run tests
+        run: |
+          c89 -ansi -Wall -Wpedantic -Werror -pedantic -pedantic-errors -D_ANSI_SOURCE -DJSON_TRACK_SOURCE -I. json.c tests/test.c -lm -o json-test
+          cd tests
+          ../json-test
+
+      - name: Build with configure script
+        run: |
+          ./configure
+          make
+
+  build-msvc:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        arch:
+          - amd64_x86
+          - amd64
+          - amd64_arm
+          - amd64_arm64
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Add cl.exe to path
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: ${{ matrix.arch }}
+
+      - name: Build json.c as MS C89 without JSON_TRACK_SOURCE
+        run: cl /permissive- /Zc:preprocessor /Zc:throwingNew /volatile:iso /utf-8 /Za /Wall /LD json.c
+
+      - name: Build json.c as MS C89
+        run: cl /permissive- /Zc:preprocessor /Zc:throwingNew /volatile:iso /utf-8 /Za /Wall /DJSON_TRACK_SOURCE /LD json.c
+
+      - name: Build json.c as C11
+        run: cl /permissive- /Zc:preprocessor /Zc:throwingNew /volatile:iso /utf-8 /std:c11 /Za /Wall /DJSON_TRACK_SOURCE /LD json.c
+
+      - name: Build json.c as C17
+        run: cl /permissive- /Zc:preprocessor /Zc:throwingNew /volatile:iso /utf-8 /std:c17 /Za /Wall /DJSON_TRACK_SOURCE /LD json.c
+
+      - name: Build json.c as C++14
+        run: cl /permissive- /Zc:preprocessor /Zc:throwingNew /volatile:iso /utf-8 /std:c++14 /Zc:__cplusplus /Wall /DJSON_TRACK_SOURCE /LD /Tp json.c
+
+      - name: Build json.c as C++17
+        run: cl /permissive- /Zc:preprocessor /Zc:throwingNew /volatile:iso /utf-8 /std:c++17 /Zc:__cplusplus /Wall /DJSON_TRACK_SOURCE /LD /Tp json.c
+
+      - name: Build json.c as C++ latest
+        run: cl /permissive- /Zc:preprocessor /Zc:throwingNew /volatile:iso /utf-8 /std:c++latest /Zc:__cplusplus /Wall /DJSON_TRACK_SOURCE /LD /Tp json.c
+
+      - name: Build test executable
+        run: cl /permissive- /Zc:preprocessor /Zc:throwingNew /volatile:iso /utf-8 /std:c++latest /Zc:__cplusplus /Wall /DJSON_TRACK_SOURCE /I . /MT /Tp json.c /Tp tests\test.c /Fetests\json-test.exe
+
+      - name: Run tests
+        if: matrix.arch != 'amd64_arm' && matrix.arch != 'amd64_arm64'
+        working-directory: ./tests
+        run: ./json-test.exe

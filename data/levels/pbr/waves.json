@@ -1,0 +1,216 @@
+{
+    "settings":
+    {
+        "name": "Waves animation",
+
+        "shader": 6,
+        "program": 2,
+
+        "program_settings": {
+            "rows": 15,
+            "cols": 15,
+            "scaling": [0.25, 0.25, 0.15],
+            "cube_size": 2.0,
+            "offset": 0.15,
+            "row_period_ms": 4000.0,
+            "col_period_ms": 8000.0,
+            "row_offset": 10.0,
+            "col_offset": 8.0,
+            "row_amplitude": 0.7,
+            "col_amplitude": 0.7,
+            "sin_offset": 1.4,
+            "animation1": "position",
+            "animation": "scaling",
+            "shadow_plane": false,
+            "shadow_plane_z": -4.0,
+            "shadow_plane_scaling": 2.5
+        },
+
+        "background_color": [0.20, 0.20, 0.20, 1.0],
+        "wireframe_color": [0.407, 0.976, 1.0, 0.40],
+        "ambient_color": [0.2, 0.2, 0.25, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_lights": false,
+        "debug_grid": false,
+
+        "tone_mapping": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping1": "aces_aprox",
+
+        "camera": {
+            "type": "focus",
+            "eye": [-10.0, 10.0, 5.0],
+            "target": [0.0, 0.0, 0.0],
+            "wheel_sens": 0.2,
+            "projection": "perspective",
+            "fov": 50,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": -1.0,
+            "near": 0.1,
+            "far": 500.0
+        },
+
+        "postprocessing": {
+            "enabled": false,
+            "tint": [1.2, 1.2, 1.35]
+        },
+
+        "flags": {
+            "shadow": false,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_solid": false,
+            "mode_material": false
+        }
+    },
+
+    "packages": [
+        "data/assets/textures/hdr_newport.pkg",
+        "data/assets/meshes/shapes.pkg"
+    ],
+
+    "textures": [
+        {
+            "id": 0,
+            "type": "pbr_ambient",
+            "name": "textures/hdr_newport/newport_loft",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        }
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/shapes/cube_base" },
+        { "id": 1, "name": "meshes/shapes/cube_base_lines" },
+        { "id": 2, "name": "meshes/shapes/plane" },
+        { "id": 3, "name": "meshes/shapes/skybox" }
+    ],
+
+    "materials": [
+        {
+            "id": 0,
+            "type": "pbr",
+            "name": "material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient1"],
+            "settings": {
+                "albedo": [0.2, 0.3, 0.4],
+                "metalness": 0.2,
+                "roughness": 0.2,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 1,
+            "type": "pbr",
+            "name": "material 1",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "metalness": 0.0,
+                "roughness": 1.0,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "exclude_from_shadow": true
+            }
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun",
+            "rotation": [0.0, 45.0, 45.0],
+            "color": [1.0, 1.0, 1.0, 1.0],
+            "il": 10.0,
+
+            "shadow": {
+                "camera_distance": 10.0,
+                "camera_fov": 10.0,
+                "f_near": 0.1,
+                "f_far": 500.0,
+                "type": "pcf_3x3_linear",
+                "normal_offset": 0.009,
+                "depth_bias": 0.00015,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [5.0, 0.0, 5.0],
+            "color": [1.0, 0.437, 0.474, 1.0],
+            "il": 200.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "linear",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [-0.4, -3.3, 0.2],
+            "color": [0.628, 0.419, 1.0, 1.0],
+            "il": 200.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [0.5, -2.0, -2.0],
+            "color": [0.128, 0.719, 0.921, 1.0],
+            "il": 100.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 2.0,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        }
+    ]
+}

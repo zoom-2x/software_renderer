@@ -1,0 +1,200 @@
+{
+    "settings":
+    {
+        "name": "Torus",
+
+        "shader": 6,
+        "program": 6,
+
+        "program_settings": {
+            "min_radius": 2.5,
+            "max_radius": 3.5,
+            "min_height": -1.0,
+            "max_height": 1.5,
+            "rotation_speed": 10.0,
+            "radius_speed": 8.0,
+            "height_speed": 12.0,
+            "angle_offset": -60.0
+        },
+
+        "background_color": [0.30, 0.30, 0.30, 1.0],
+        "wireframe_color": [0.407, 0.976, 1.0, 0.20],
+        "ambient_color": [0.2, 0.2, 0.3, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_grid": false,
+        "debug_lights": false,
+
+        "tone_mapping1": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping": "aces_aprox",
+
+        "camera": {
+            "type": "focus",
+            "eye": [4.0, 0.0, 0.0],
+            "target": [0.0, 0.0, 0.0],
+            "wheel_sens": 0.2,
+            "projection": "perspective",
+            "fov": 50,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": -1.0,
+            "near": 0.1,
+            "far": 40.0
+        },
+
+        "postprocessing": {
+            "enabled": false,
+            "tint": [1.2, 1.2, 1.35]
+        },
+
+        "flags": {
+            "shadow": false,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_solid": false,
+            "mode_material": false
+        }
+    },
+
+    "packages": [
+        "data/assets/textures/hdr_venice.pkg",
+        "data/assets/textures/hdr_newport.pkg",
+        "data/assets/meshes/shapes.pkg"
+    ],
+
+    "textures": [
+        {
+            "id": 0,
+            "type": "pbr_ambient",
+            "comment": "You can switch between the two hdr ambients.",
+            "name": "textures/hdr_venice/venice_sunset",
+            "name1": "textures/hdr_newport/newport_loft",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        }
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/shapes/torus_knot" },
+        { "id": 1, "name": "meshes/shapes/torus_knot_lines" },
+        { "id": 2, "name": "meshes/shapes/skybox" },
+    ],
+
+    "materials": [
+        {
+            "id": 0,
+            "type": "pbr",
+            "name": "sphere material",
+            "maps": {
+                "albedo": 0,
+                "ambient": 0
+            },
+            "components": ["albedo1", "normal", "roughness", "metalness", "ao", "ambient"],
+            "settings": {
+                "albedo": [0.5, 0.5, 0.8],
+                "metalness": 1.0,
+                "roughness": 0.2,
+                "ao": 1.0,
+                "f0": [0.65, 0.65, 0.65],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": true,
+                "opacity": 0.6
+            }
+        },
+
+        {
+            "id": 1,
+            "type": "skybox",
+            "name": "skybox material",
+            "input": 0
+        }
+    ],
+
+    "models": [
+        {
+            "name": "torus",
+            "mesh": 0,
+            "mesh_lines": 1,
+            "material": 0,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "skybox",
+            "mesh": 2,
+            "material": 1,
+            "shader": 13,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [4.0, 4.0, 4.0]
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun1",
+            "rotation": [0.0, 60.0, 45.0],
+            "color": [0.9, 0.9, 0.7, 1.0],
+            "il": 4.0,
+
+            "shadow": {
+                "camera_distance": 10.0,
+                "camera_fov": 10.0,
+                "f_near": 0.1,
+                "f_far": 100.0,
+                "type": "pcf_3x3_linear",
+                "normal_offset": 0.009,
+                "depth_bias": 0.0002,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [-4.0, -2.0, 1.5],
+            "color": [0.5, 0.8, 1.0, 1.0],
+            "il": 4.0,
+
+            "kc": 1,
+            "kl": 1,
+            "kq": 1,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [1.0, -1.5, 2.8],
+            "color": [0.8, 0.6, 0.65, 1.0],
+            "il": 4.0,
+
+            "kc": 1,
+            "kl": 1,
+            "kq": 1,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        }
+    ]
+}

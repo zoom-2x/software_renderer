@@ -1,0 +1,477 @@
+{
+    "settings":
+    {
+        "name": "Spheres",
+
+        "shader": 6,
+        "program": 0,
+
+        "background_color": [0.30, 0.30, 0.30, 1.0],
+        "wireframe_color": [0.407, 0.976, 1.0, 0.20],
+        "ambient_color": [0.2, 0.2, 0.3, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_grid": false,
+        "debug_lights": false,
+
+        "tone_mapping1": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping": "aces_aprox",
+
+        "camera": {
+            "type": "focus",
+            "eye": [0.0, 12.0, -1.5],
+            "target": [0.0, 0.0, -1.5],
+            "wheel_sens": 0.2,
+            "projection": "perspective",
+            "fov": 50,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": -1.0,
+            "near": 0.1,
+            "far": 40.0
+        },
+
+        "postprocessing": {
+            "enabled": false,
+            "tint": [0.5, 0.5, 0.5]
+        },
+
+        "flags": {
+            "shadow": false,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_solid": false,
+            "mode_material": false
+        }
+    },
+
+    "packages": [
+        "data/assets/textures/hdr_venice.pkg",
+        "data/assets/textures/hdr_newport.pkg",
+        "data/assets/meshes/shapes.pkg"
+    ],
+
+    "textures": [
+        {
+            "id": 0,
+            "type": "pbr_ambient",
+            "comment": "You can switch between the two hdr ambients.",
+            "name": "textures/hdr_venice/venice_sunset",
+            "name1": "textures/hdr_newport/newport_loft",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        }
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/shapes/sphere" },
+        { "id": 1, "name": "meshes/shapes/skybox" },
+        { "id": 2, "name": "meshes/shapes/sphere_lines" }
+    ],
+
+    "materials": [
+        {
+            "id": 0,
+            "type": "skybox",
+            "name": "skybox material",
+            "input": 0
+        },
+
+        {
+            "id": 1,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.1,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 2,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.3,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 3,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.45,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 4,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.6,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 5,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.85,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+
+        {
+            "id": 6,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.9,
+                "roughness": 0.1,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 7,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.9,
+                "roughness": 0.3,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 8,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.9,
+                "roughness": 0.45,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 9,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.9,
+                "roughness": 0.6,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 10,
+            "type": "pbr",
+            "name": "sphere material 0",
+            "maps": {
+                "ambient": 0
+            },
+            "components": ["ambient"],
+            "settings": {
+                "albedo": [0.4, 0.4, 0.4],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.9,
+                "roughness": 0.85,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        }
+    ],
+
+    "models": [
+        {
+            "name": "sphere 0",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 1,
+            "position": [-6.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "sphere 1",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 2,
+            "position": [-3.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "sphere 2",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 3,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "sphere 3",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 4,
+            "position": [3.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "sphere 4",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 5,
+            "position": [6.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+
+        {
+            "name": "sphere 0",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 6,
+            "position": [-6.0, 0.0, -3.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "sphere 1",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 7,
+            "position": [-3.0, 0.0, -3.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "sphere 2",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 8,
+            "position": [0.0, 0.0, -3.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "sphere 3",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 9,
+            "position": [3.0, 0.0, -3.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "sphere 4",
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 10,
+            "position": [6.0, 0.0, -3.0],
+            "rotation": [0.0, 0.0, 40.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "skybox",
+            "mesh": 1,
+            "material": 0,
+            "shader": 13,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [4.0, 4.0, 4.0]
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun1",
+            "rotation": [0.0, 60.0, 45.0],
+            "color": [0.9, 0.9, 0.7, 1.0],
+            "il": 4.0,
+
+            "shadow": {
+                "camera_distance": 10.0,
+                "camera_fov": 10.0,
+                "f_near": 0.1,
+                "f_far": 100.0,
+                "type": "pcf_3x3_linear",
+                "normal_offset": 0.009,
+                "depth_bias": 0.0002,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [-4.0, -2.0, 1.5],
+            "color": [0.5, 0.8, 1.0, 1.0],
+            "il": 4.0,
+
+            "kc": 1,
+            "kl": 1,
+            "kq": 1,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [1.0, -1.5, 2.8],
+            "color": [0.8, 0.6, 0.65, 1.0],
+            "il": 4.0,
+
+            "kc": 1,
+            "kl": 1,
+            "kq": 1,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        }
+    ]
+}

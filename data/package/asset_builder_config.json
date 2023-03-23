@@ -1,0 +1,703 @@
+{
+    "textures":
+    {
+        "common": [
+            {
+                "type": "texture",
+                "alias": "not_found",
+                "path": "data/package/bitmaps/general/not_found.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "marble_diffuse",
+                "path": "data/package/bitmaps/general/marble_diffuse.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "marble_normal",
+                "path": "data/package/bitmaps/general/marble_normal.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "checkerboard",
+                "path": "data/package/bitmaps/general/checkerboard.bmp"
+            }
+        ],
+
+        "african_head":
+        [
+            {
+                "type": "texture",
+                "alias": "diffuse",
+                "path": "data/package/bitmaps/african_head/diffuse.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "ao",
+                "path": "data/package/bitmaps/african_head/ao.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "specular",
+                "path": "data/package/bitmaps/african_head/specular.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "normal",
+                "path": "data/package/bitmaps/african_head/normal.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "emission",
+                "path": "data/package/bitmaps/african_head/emission.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "roughness",
+                "path": "data/package/bitmaps/african_head/roughness.bmp"
+            }
+        ],
+
+        "chest": [
+            {
+                "type": "texture",
+                "alias": "albedo",
+                "path": "data/package/bitmaps/chest/albedo.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "normal",
+                "path": "data/package/bitmaps/chest/normal.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "metallic",
+                "path": "data/package/bitmaps/chest/metallic.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "roughness",
+                "path": "data/package/bitmaps/chest/roughness.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "ao",
+                "path": "data/package/bitmaps/chest/ao.bmp"
+            }
+        ],
+
+        "statue_head": [
+            {
+                "type": "texture",
+                "alias": "diffuse",
+                "path": "data/package/bitmaps/statue_head/diffuse.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "ao",
+                "path": "data/package/bitmaps/statue_head/ao.bmp"
+            }
+        ],
+
+        "headscan": [
+            {
+                "type": "texture",
+                "alias": "diffuse",
+                "path": "data/package/bitmaps/headscan/diffuse.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "normal",
+                "path": "data/package/bitmaps/headscan/normal.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "ao",
+                "path": "data/package/bitmaps/headscan/ao.bmp"
+            }
+        ],
+
+        "cerberus": [
+            {
+                "type": "texture",
+                "alias": "albedo",
+                "path": "data/package/bitmaps/cerberus/albedo.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "normal",
+                "path": "data/package/bitmaps/cerberus/normal.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "roughness",
+                "path": "data/package/bitmaps/cerberus/roughness.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "roughness_lite",
+                "path": "data/package/bitmaps/cerberus/roughness_lite.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "roughness_lite2",
+                "path": "data/package/bitmaps/cerberus/roughness_lite2.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "roughness_lite3",
+                "path": "data/package/bitmaps/cerberus/roughness_lite3.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "roughness_lite4",
+                "path": "data/package/bitmaps/cerberus/roughness_lite4.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "metalness",
+                "path": "data/package/bitmaps/cerberus/metalness.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "ao",
+                "path": "data/package/bitmaps/cerberus/ao.bmp"
+            }
+        ],
+
+        "sponza": [
+            {
+                "type": "texture",
+                "alias": "roof_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_roof_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "thorn_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_thorn_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "vase_plant",
+                "path": "data/package/bitmaps/sponza/vase_plant.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "vase_round",
+                "path": "data/package/bitmaps/sponza/vase_round.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "arch_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_arch_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "column_a_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_column_a_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "column_a_normal",
+                "path": "data/package/bitmaps/sponza/sponza_column_a_normal.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "background",
+                "path": "data/package/bitmaps/sponza/background.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "background_normal",
+                "path": "data/package/bitmaps/sponza/background_normal.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "bricks_a_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_bricks_a_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "bricks_a_normal",
+                "path": "data/package/bitmaps/sponza/sponza_bricks_a_normal.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "bricks_a_roughness",
+                "path": "data/package/bitmaps/sponza/sponza_bricks_a_spec.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "ceiling_a_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_ceiling_a_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "floor_a_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_floor_a_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "floor_roughness",
+                "path": "data/package/bitmaps/sponza/sponza_floor_roughness.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "arch_roughness",
+                "path": "data/package/bitmaps/sponza/sponza_arch_roughness.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "column_c_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_column_c_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "column_c_normal",
+                "path": "data/package/bitmaps/sponza/sponza_column_c_normal.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "details_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_details_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "column_b_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_column_b_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "column_b_normal",
+                "path": "data/package/bitmaps/sponza/sponza_column_b_normal.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "column_b_roughness",
+                "path": "data/package/bitmaps/sponza/sponza_column_b_roughness.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "flagpole_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_flagpole_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "fabric_green_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_fabric_green_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "fabric_blue_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_fabric_blue_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "fabric_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_fabric_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "curtain_blue_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_curtain_blue_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "curtain_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_curtain_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "curtain_green_diffuse",
+                "path": "data/package/bitmaps/sponza/sponza_curtain_green_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "chain_texture",
+                "path": "data/package/bitmaps/sponza/sponza_chain_texture.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "vase_hanging",
+                "path": "data/package/bitmaps/sponza/vase_hanging.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "vase_diffuse",
+                "path": "data/package/bitmaps/sponza/vase_diff.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "vase_normal",
+                "path": "data/package/bitmaps/sponza/vase_normal.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "lion_diffuse",
+                "path": "data/package/bitmaps/sponza/lion.bmp",
+                "disabled": false
+            },
+            {
+                "type": "texture",
+                "alias": "lion_normal",
+                "path": "data/package/bitmaps/sponza/lion_normal.bmp",
+                "disabled": false
+            }
+        ],
+
+        "craftsman": [
+            {
+                "type": "texture",
+                "alias": "anvil_diffuse",
+                "path": "data/package/bitmaps/craftsman/anvil_diffuse.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "floor_diffuse",
+                "path": "data/package/bitmaps/craftsman/floor_diffuse.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "smith_diffuse",
+                "path": "data/package/bitmaps/craftsman/smith_diffuse.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "smith_emission",
+                "path": "data/package/bitmaps/craftsman/smith_emission.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "spark_diffuse",
+                "path": "data/package/bitmaps/craftsman/spark_diffuse.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "spark_emission",
+                "path": "data/package/bitmaps/craftsman/spark_emission.bmp"
+            }
+        ],
+
+        "helmet": [
+            {
+                "type": "texture",
+                "alias": "albedo",
+                "path": "data/package/bitmaps/helmet/helmet_basecolor.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "emission",
+                "path": "data/package/bitmaps/helmet/helmet_emission.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "metalness",
+                "path": "data/package/bitmaps/helmet/helmet_metalness.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "normal",
+                "path": "data/package/bitmaps/helmet/helmet_normal.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "ao",
+                "path": "data/package/bitmaps/helmet/helmet_occlusion.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "roughness",
+                "path": "data/package/bitmaps/helmet/helmet_roughness.bmp"
+            }
+        ],
+
+        "angry_dragon": [
+            {
+                "type": "texture",
+                "alias": "chain_albedo",
+                "path": "data/package/bitmaps/angry_dragon/chain_baseColor.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "chain_arm",
+                "path": "data/package/bitmaps/angry_dragon/chain_metallicRoughness.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "chain_normal",
+                "path": "data/package/bitmaps/angry_dragon/chain_normal.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "dragon_albedo",
+                "path": "data/package/bitmaps/angry_dragon/DragonMain_baseColor.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "dragon_emission",
+                "path": "data/package/bitmaps/angry_dragon/DragonMain_emissive.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "dragon_arm",
+                "path": "data/package/bitmaps/angry_dragon/DragonMain_metallicRoughness.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "dragon_normal",
+                "path": "data/package/bitmaps/angry_dragon/DragonMain_normal.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "eye_emission",
+                "path": "data/package/bitmaps/angry_dragon/material_emissive.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "sparks_albedo",
+                "path": "data/package/bitmaps/angry_dragon/Sparks2D_baseColor.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "sparks_emission",
+                "path": "data/package/bitmaps/angry_dragon/Sparks2D_emissive.bmp"
+            }
+        ],
+
+        "cyberpunk_car": [
+            {
+                "type": "texture",
+                "alias": "vehicle_basecolor",
+                "path": "data/package/bitmaps/cyberpunk_car/Vehicle_baseColor.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "vehicle_red_basecolor",
+                "path": "data/package/bitmaps/cyberpunk_car/Vehicle_red_baseColor.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "vehicle_blue_basecolor",
+                "path": "data/package/bitmaps/cyberpunk_car/Vehicle_blue_baseColor.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "vehicle_emission",
+                "path": "data/package/bitmaps/cyberpunk_car/Vehicle_emissive.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "vehicle_arm",
+                "path": "data/package/bitmaps/cyberpunk_car/Vehicle_metallicRoughness.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "vehicle_normal",
+                "path": "data/package/bitmaps/cyberpunk_car/Vehicle_normal.bmp"
+            }
+        ],
+
+        "drake_pistol": [
+            {
+                "type": "texture",
+                "alias": "albedo",
+                "path": "data/package/bitmaps/drake_pistol/base_baseColor.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "normal",
+                "path": "data/package/bitmaps/drake_pistol/base_normal.bmp"
+            },
+            {
+                "type": "texture",
+                "alias": "arm",
+                "path": "data/package/bitmaps/drake_pistol/base_metallicRoughness.bmp"
+            }
+        ],
+
+        "cubemaps": [
+            {
+                "type": "cubemap",
+                "alias": "ocean_skybox",
+                "path": {
+                    "left": "data/package/bitmaps/cubemaps/skybox/left.bmp",
+                    "right": "data/package/bitmaps/cubemaps/skybox/right.bmp",
+                    "front": "data/package/bitmaps/cubemaps/skybox/front.bmp",
+                    "back": "data/package/bitmaps/cubemaps/skybox/back.bmp",
+                    "top": "data/package/bitmaps/cubemaps/skybox/top.bmp",
+                    "bottom": "data/package/bitmaps/cubemaps/skybox/bottom.bmp"
+                }
+            }
+        ]
+    },
+
+    "hdrs":
+    {
+        "hdr_venice": [
+            {
+                "type": "pbr_ambient",
+                "alias": "venice_sunset",
+                "path": "data/package/bitmaps/hdr/venice_sunset_4k.hdr",
+                "debug": false
+            }
+        ],
+
+        "hdr_waterfall": [
+            {
+                "type": "pbr_ambient",
+                "alias": "frozen_waterfall",
+                "path": "data/package/bitmaps/hdr/Frozen_Waterfall_Ref.hdr",
+                "debug": false
+            }
+        ],
+
+        "hdr_newport": [
+            {
+                "type": "pbr_ambient",
+                "alias": "newport_loft",
+                "path": "data/package/bitmaps/hdr/Newport_Loft_Ref.hdr"
+            }
+        ],
+
+        "hdr_moonvalley": [
+            {
+                "type": "pbr_ambient",
+                "alias": "moonvalley_dirtroad",
+                "path": "data/package/bitmaps/hdr/MonValley_G_DirtRoad_3k.hdr"
+            }
+        ]
+    },
+
+    "meshes":
+    {
+        "shapes": [
+            { "path": "data/package/models-gltf/plane.glb" },
+            { "path": "data/package/models-gltf/skybox.glb" },
+            { "path": "data/package/models-gltf/skybox.gen.glb", "generator": true },
+            { "path": "data/package/models-gltf/cube.glb" },
+            { "path": "data/package/models-gltf/cube.gen.glb", "generator": true },
+            { "path": "data/package/models-gltf/cube_base.glb" },
+            { "path": "data/package/models-gltf/cube_base.gen.glb", "generator": true },
+            { "path": "data/package/models-gltf/cone.glb" },
+            { "path": "data/package/models-gltf/cone.gen.glb", "generator": true },
+            { "path": "data/package/models-gltf/sphere.glb"},
+            { "path": "data/package/models-gltf/sphere.gen.glb", "generator": true },
+            { "path": "data/package/models-gltf/sphere_low.glb"},
+            { "path": "data/package/models-gltf/sphere_low.gen.glb", "generator": true },
+            { "path": "data/package/models-gltf/cylinder.glb" },
+            { "path": "data/package/models-gltf/cylinder.gen.glb", "generator": true },
+            { "path": "data/package/models-gltf/torus.glb" },
+            { "path": "data/package/models-gltf/torus.gen.glb", "generator": true },
+            { "path": "data/package/models-gltf/torus_knot.glb" },
+            { "path": "data/package/models-gltf/torus_knot.gen.glb", "generator": true }
+        ],
+
+        "common": [
+            { "path": "data/package/models-gltf/monkey.glb" },
+            { "path": "data/package/models-gltf/monkey.gen.glb", "generator": true },
+        ],
+
+        "african_head": [
+            { "path": "data/package/models-gltf/african_head.glb" },
+            { "path": "data/package/models-gltf/african_head.gen.glb", "generator": true }
+        ],
+
+        "chest": [
+            { "path": "data/package/models-gltf/chest.glb" },
+            { "path": "data/package/models-gltf/chest.gen.glb", "generator": true }
+        ],
+
+        "statues": [
+            { "path": "data/package/models-gltf/statue_head.glb" },
+            { "path": "data/package/models-gltf/statue_head.gen.glb", "generator": true }
+        ],
+
+        "headscan": [
+            { "path": "data/package/models-gltf/headscan.glb" },
+            { "path": "data/package/models-gltf/headscan.gen.glb", "generator": true }
+        ],
+
+        "cerberus": [
+            { "path": "data/package/models-gltf/cerberus.glb" },
+            { "path": "data/package/models-gltf/cerberus.gen.glb", "generator": true }
+        ],
+
+        "buildings": [
+            { "path": "data/package/models-gltf/sponza_separated.glb" },
+            { "path": "data/package/models-gltf/sponza_separated.gen.glb", "generator": true },
+        ],
+
+        "craftsman": [
+            { "path": "data/package/models-gltf/craftsman.glb" },
+            { "path": "data/package/models-gltf/craftsman.gen.glb", "generator": true }
+        ],
+
+        "helmet": [
+            { "path": "data/package/models-gltf/helmet.glb" },
+            { "path": "data/package/models-gltf/helmet.gen.glb", "generator": true }
+        ],
+
+        "angry_dragon": [
+            { "path": "data/package/models-gltf/angry_dragon.glb" },
+            { "path": "data/package/models-gltf/angry_dragon.gen.glb", "generator": true }
+        ],
+
+        "cyberpunk_car": [
+            { "path": "data/package/models-gltf/cyberpunk_car.glb" },
+            { "path": "data/package/models-gltf/cyberpunk_car.gen.glb", "generator": true }
+        ],
+
+        "drake_pistol": [
+            { "path": "data/package/models-gltf/drake_pistol.glb" },
+            { "path": "data/package/models-gltf/drake_pistol.gen.glb", "generator": true }
+        ],
+
+        "train": [
+            { "path": "data/package/models-gltf/train_0.glb" },
+            { "path": "data/package/models-gltf/train_0.gen.glb", "generator": true },
+            { "path": "data/package/models-gltf/train_1.glb" },
+            { "path": "data/package/models-gltf/train_1.gen.glb", "generator": true }
+        ],
+
+        "wolf_mask": [
+            { "path": "data/package/models-gltf/wolf_mask.glb" },
+            { "path": "data/package/models-gltf/wolf_mask.gen.glb", "generator": true }
+        ],
+    },
+
+    "fonts": {},
+    "texts": {}
+}

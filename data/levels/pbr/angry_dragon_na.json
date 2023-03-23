@@ -1,0 +1,387 @@
+{
+    "settings":
+    {
+        "name": "Angry dragon",
+
+        "shader": 6,
+        "program": 0,
+
+        "background_color": [0.10, 0.10, 0.10, 1.0],
+        "wireframe_color": [0.407, 0.976, 1.0, 0.20],
+        "ambient_color": [0.2, 0.2, 0.3, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_lights": true,
+        "debug_grid": true,
+        "point_radius": 0,
+
+        "tone_mapping": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping1": "aces_aprox",
+
+        "camera": {
+            "type": "focus",
+            "eye": [0.0, -6.0, 2.0],
+            "target": [0.0, 0.0, 0.0],
+            "wheel_sens": 0.2,
+            "projection": "perspective",
+            "fov": 50,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": -1.0,
+            "near": 0.1,
+            "far": 40.0
+        },
+
+        "postprocessing": {
+            "enabled": false,
+            "tint": [1.2, 1.2, 1.35]
+        },
+
+        "flags": {
+            "shadow": false,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_point": false,
+            "mode_solid": false,
+            "mode_material": false
+        }
+    },
+
+    "packages": [
+        "data/assets/textures/angry_dragon.pkg",
+        "data/assets/meshes/angry_dragon.pkg",
+        "data/assets/meshes/shapes.pkg"
+    ],
+
+    "textures": [
+        {
+            "id": 0,
+            "type": "texture",
+            "name": "textures/angry_dragon/chain_albedo",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+        {
+            "id": 1,
+            "type": "texture",
+            "name": "textures/angry_dragon/chain_arm",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": false
+        },
+
+        {
+            "id": 2,
+            "type": "texture",
+            "name": "textures/angry_dragon/chain_normal",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": false
+        },
+
+        {
+            "id": 3,
+            "type": "texture",
+            "name": "textures/angry_dragon/dragon_albedo",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": false
+        },
+
+        {
+            "id": 4,
+            "type": "texture",
+            "name": "textures/angry_dragon/dragon_emission",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": false
+        },
+
+        {
+            "id": 5,
+            "type": "texture",
+            "name": "textures/angry_dragon/dragon_arm",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": false
+        },
+
+        {
+            "id": 6,
+            "type": "texture",
+            "name": "textures/angry_dragon/dragon_normal",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": false
+        },
+
+        {
+            "id": 7,
+            "type": "texture",
+            "name": "textures/angry_dragon/eye_emission",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": false
+        },
+
+        {
+            "id": 8,
+            "type": "texture",
+            "name": "textures/angry_dragon/sparks_albedo",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": false
+        },
+
+        {
+            "id": 9,
+            "type": "texture",
+            "name": "textures/angry_dragon/sparks_emission",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": false
+        }
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/angry_dragon/chain" },
+        { "id": 1, "name": "meshes/angry_dragon/dragon" },
+        { "id": 2, "name": "meshes/angry_dragon/spark" },
+        { "id": 3, "name": "meshes/angry_dragon/eye" },
+        { "id": 4, "name": "meshes/angry_dragon/chain_lines" },
+        { "id": 5, "name": "meshes/angry_dragon/dragon_lines" },
+        { "id": 6, "name": "meshes/angry_dragon/spark_lines" },
+        { "id": 7, "name": "meshes/angry_dragon/eye_lines" },
+        { "id": 8, "name": "meshes/angry_dragon/chain_points" },
+        { "id": 9, "name": "meshes/angry_dragon/dragon_points" },
+        { "id": 10, "name": "meshes/angry_dragon/spark_points" },
+        { "id": 11, "name": "meshes/angry_dragon/eye_points" },
+        { "id": 12, "name": "meshes/shapes/skybox" }
+    ],
+
+    "materials": [
+        {
+            "id": 0,
+            "type": "pbr",
+            "name": "chain material",
+            "maps": {
+                "albedo": 0,
+                "arm": 1,
+                "normal": 2
+            },
+            "components": ["albedo", "normal", "arm"],
+            "settings": {
+                "albedo": [0.5, 0.5, 0.5],
+                "metalness": 0.9,
+                "roughness": 0.2,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 1,
+            "type": "pbr",
+            "name": "dragon material",
+            "maps": {
+                "albedo": 3,
+                "emission": 4,
+                "arm": 5,
+                "normal": 6
+            },
+            "components": ["albedo", "normal", "arm", "emission"],
+            "settings": {
+                "albedo": [0.5, 0.5, 0.5],
+                "metalness": 0.9,
+                "roughness": 0.2,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 0.239,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 2,
+            "type": "pbr",
+            "name": "spark material",
+            "maps": {
+                "albedo": 8,
+                "emission": 9
+            },
+            "components": ["albedo", "emission"],
+            "settings": {
+                "albedo": [0.5, 0.5, 0.5],
+                "metalness": 0.0,
+                "roughness": 1.0,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": true
+            }
+        },
+
+        {
+            "id": 3,
+            "type": "pbr",
+            "name": "eye material",
+            "maps": {
+                "emission": 7
+            },
+            "components": ["albedo", "emission"],
+            "settings": {
+                "albedo": [0.257, 0.034, 0.007],
+                "metalness": 0.0,
+                "roughness": 0.234,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        }
+    ],
+
+    "models": [
+        {
+            "mesh": 0,
+            "mesh_lines": 4,
+            "mesh_points": 8,
+            "material": 0,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "mesh": 1,
+            "mesh_lines": 5,
+            "mesh_points": 9,
+            "material": 1,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "mesh": 2,
+            "mesh_lines": 6,
+            "mesh_points": 10,
+            "material": 2,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "mesh": 3,
+            "mesh_lines": 7,
+            "mesh_points": 11,
+            "material": 3,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun1",
+            "rotation": [0.0, 60.0, 45.0],
+            "color": [1.0, 0.730, 0.584, 1.0],
+            "il": 10.0,
+
+            "shadow": {
+                "camera_distance": 10.0,
+                "camera_fov": 10.0,
+                "f_near": 0.1,
+                "f_far": 100.0,
+                "type": "pcf_3x3_linear",
+                "normal_offset": 0.009,
+                "depth_bias": 0.0002,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point",
+            "position": [3.3, 1.0, 0.95],
+            "color": [1.0, 0.437, 0.474, 1.0],
+            "il": 200.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "linear",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point",
+            "position": [-0.4, -3.3, 0.2],
+            "color": [0.628, 0.419, 1.0, 1.0],
+            "il": 200.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "linear",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point",
+            "position": [0.5, -2.0, -2.0],
+            "color": [0.128, 0.919, 0.621, 1.0],
+            "il": 100.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 2.0,
+
+            "shadow": {
+                "type": "linear",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        }
+    ]
+}

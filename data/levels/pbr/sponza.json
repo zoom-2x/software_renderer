@@ -1,0 +1,1339 @@
+{
+    "settings":
+    {
+        "name": "Sponza pbr level",
+
+        "shader": 6,
+        "program": false,
+
+        "background_color1": [0.80, 0.90, 1.0, 1.0],
+        "background_color": [0.0, 0.0, 0.0, 1.0],
+        "wireframe_color": [0.407, 0.976, 1.0, 0.20],
+        "solid_color": [1.0, 1.0, 1.0, 1.0],
+        "ambient_color": [0.12, 0.24, 0.34, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_grid": false,
+        "debug_lights": false,
+
+        "tone_mapping1": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping": "aces_aprox",
+
+        "camera": {
+            "type": "basic",
+            "eye": [0.0, -5.0, 6.0],
+            "target": [0.0, -4.0, 6.0],
+            "projection": "perspective",
+            "projection1": "orthographic",
+            "fov": 60,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": 1.0,
+            "near": 0.1,
+            "far": 100.0
+        },
+
+        "flags": {
+            "shadow": true,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_solid": false,
+            "mode_material": false
+        }
+    },
+
+    "packages": [
+        "data/assets/textures/sponza.pkg",
+        "data/assets/meshes/buildings.pkg"
+    ],
+
+    "textures": [
+        {
+            "id": 0,
+            "name": "textures/sponza/roof_diffuse",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 1,
+            "name": "textures/sponza/thorn_diffuse",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 2,
+            "name": "textures/sponza/vase_plant",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 3,
+            "name": "textures/sponza/vase_round",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 4,
+            "name": "textures/sponza/background",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 5,
+            "name": "textures/sponza/background_normal",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 6,
+            "name": "textures/sponza/bricks_a_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 7,
+            "name": "textures/sponza/bricks_a_normal",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 8,
+            "name": "textures/sponza/bricks_a_roughness",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 9,
+            "name": "textures/sponza/arch_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 10,
+            "name": "textures/sponza/ceiling_a_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 11,
+            "name": "textures/sponza/column_a_diffuse",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 12,
+            "name": "textures/sponza/column_a_normal",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 13,
+            "name": "textures/sponza/floor_a_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 14,
+            "name": "textures/sponza/floor_roughness",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 15,
+            "name": "textures/sponza/arch_roughness",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 16,
+            "name": "textures/sponza/column_c_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 17,
+            "name": "textures/sponza/column_c_normal",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 18,
+            "name": "textures/sponza/details_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 19,
+            "name": "textures/sponza/column_b_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 20,
+            "name": "textures/sponza/column_b_normal",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 21,
+            "name": "textures/sponza/column_b_roughness",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 22,
+            "name": "textures/sponza/flagpole_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 23,
+            "name": "textures/sponza/fabric_green_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 24,
+            "name": "textures/sponza/fabric_blue_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 25,
+            "name": "textures/sponza/fabric_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 26,
+            "name": "textures/sponza/curtain_blue_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 27,
+            "name": "textures/sponza/curtain_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 28,
+            "name": "textures/sponza/curtain_green_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 29,
+            "name": "textures/sponza/chain_texture",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 30,
+            "name": "textures/sponza/vase_hanging",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 31,
+            "name": "textures/sponza/vase_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 32,
+            "name": "textures/sponza/vase_normal",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 33,
+            "name": "textures/sponza/lion_diffuse",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+
+        {
+            "id": 34,
+            "name": "textures/sponza/lion_normal",
+            "wrap": "repeat",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        }
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/buildings/sponza.000" },
+        { "id": 1, "name": "meshes/buildings/sponza.001" },
+        { "id": 2, "name": "meshes/buildings/sponza.002" },
+        { "id": 3, "name": "meshes/buildings/sponza.003" },
+        { "id": 4, "name": "meshes/buildings/sponza.004" },
+        { "id": 5, "name": "meshes/buildings/sponza.005" },
+        { "id": 6, "name": "meshes/buildings/sponza.006" },
+        { "id": 7, "name": "meshes/buildings/sponza.007" },
+        { "id": 8, "name": "meshes/buildings/sponza.008" },
+        { "id": 9, "name": "meshes/buildings/sponza.009" },
+        { "id": 10, "name": "meshes/buildings/sponza.010" },
+        { "id": 11, "name": "meshes/buildings/sponza.011" },
+        { "id": 12, "name": "meshes/buildings/sponza.012" },
+        { "id": 13, "name": "meshes/buildings/sponza.013" },
+        { "id": 14, "name": "meshes/buildings/sponza.014" },
+        { "id": 15, "name": "meshes/buildings/sponza.015" },
+        { "id": 16, "name": "meshes/buildings/sponza.016" },
+        { "id": 17, "name": "meshes/buildings/sponza.017" },
+        { "id": 18, "name": "meshes/buildings/sponza.018" },
+        { "id": 19, "name": "meshes/buildings/sponza.019" },
+        { "id": 20, "name": "meshes/buildings/sponza.020" },
+        { "id": 21, "name": "meshes/buildings/sponza.021" },
+        { "id": 22, "name": "meshes/buildings/sponza.022" },
+        { "id": 23, "name": "meshes/buildings/sponza.023" },
+        { "id": 24, "name": "meshes/buildings/sponza.024" },
+
+        { "id": 25, "name": "meshes/buildings/sponza.000_lines" },
+        { "id": 26, "name": "meshes/buildings/sponza.001_lines" },
+        { "id": 27, "name": "meshes/buildings/sponza.002_lines" },
+        { "id": 28, "name": "meshes/buildings/sponza.003_lines" },
+        { "id": 29, "name": "meshes/buildings/sponza.004_lines" },
+        { "id": 30, "name": "meshes/buildings/sponza.005_lines" },
+        { "id": 31, "name": "meshes/buildings/sponza.006_lines" },
+        { "id": 32, "name": "meshes/buildings/sponza.007_lines" },
+        { "id": 33, "name": "meshes/buildings/sponza.008_lines" },
+        { "id": 34, "name": "meshes/buildings/sponza.009_lines" },
+        { "id": 35, "name": "meshes/buildings/sponza.010_lines" },
+        { "id": 36, "name": "meshes/buildings/sponza.011_lines" },
+        { "id": 37, "name": "meshes/buildings/sponza.012_lines" },
+        { "id": 38, "name": "meshes/buildings/sponza.013_lines" },
+        { "id": 39, "name": "meshes/buildings/sponza.014_lines" },
+        { "id": 40, "name": "meshes/buildings/sponza.015_lines" },
+        { "id": 41, "name": "meshes/buildings/sponza.016_lines" },
+        { "id": 42, "name": "meshes/buildings/sponza.017_lines" },
+        { "id": 43, "name": "meshes/buildings/sponza.018_lines" },
+        { "id": 44, "name": "meshes/buildings/sponza.019_lines" },
+        { "id": 45, "name": "meshes/buildings/sponza.020_lines" },
+        { "id": 46, "name": "meshes/buildings/sponza.021_lines" },
+        { "id": 47, "name": "meshes/buildings/sponza.022_lines" },
+        { "id": 48, "name": "meshes/buildings/sponza.023_lines" },
+        { "id": 49, "name": "meshes/buildings/sponza.024_lines" }
+    ],
+
+    "materials": [
+        {
+            "id": 0,
+            "type": "pbr",
+            "name": "sponza.000",
+            "maps": {
+                "albedo": 0
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 1,
+            "type": "pbr",
+            "name": "sponza.001",
+            "maps": {
+                "albedo": 1
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": true
+            }
+        },
+
+        {
+            "id": 2,
+            "type": "pbr",
+            "name": "sponza.002",
+            "maps": {
+                "albedo": 2
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": true
+            }
+        },
+
+        {
+            "id": 3,
+            "type": "pbr",
+            "name": "sponza.003",
+            "maps": {
+                "albedo": 3
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 4,
+            "type": "pbr",
+            "name": "sponza.004",
+            "maps": {
+                "albedo": 4,
+                "normal": 5
+            },
+            "components": ["albedo", "normal"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 5,
+            "type": "pbr",
+            "name": "sponza.005",
+            "maps": {
+                "albedo": 6,
+                "normal": 7,
+                "roughness": 8
+            },
+            "components": ["albedo", "normal", "roughness"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.2,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 0.65,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 6,
+            "type": "pbr",
+            "name": "sponza.006",
+            "maps": {
+                "albedo": 9,
+                "roughness": 15
+            },
+            "components": ["albedo", "roughness"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.4,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 7,
+            "type": "pbr",
+            "name": "sponza.007",
+            "maps": {
+                "albedo": 10
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.4,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 8,
+            "type": "pbr",
+            "name": "sponza.008",
+            "maps": {
+                "albedo": 11,
+                "normal": 12
+            },
+            "components": ["albedo", "normal"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.4,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 9,
+            "type": "pbr",
+            "name": "sponza.009",
+            "maps": {
+                "albedo": 13,
+                "roughness": 14
+            },
+            "components": ["albedo", "roughness"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.4,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 10,
+            "type": "pbr",
+            "name": "sponza.010",
+            "maps": {
+                "albedo": 16,
+                "normal": 17
+            },
+            "components": ["albedo", "normal"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.6,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 11,
+            "type": "pbr",
+            "name": "sponza.011",
+            "maps": {
+                "albedo": 18
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.6,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 12,
+            "type": "pbr",
+            "name": "sponza.012",
+            "maps": {
+                "albedo": 19,
+                "roughness": 21
+            },
+            "components": ["albedo", "roughness"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.5,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 13,
+            "type": "pbr",
+            "name": "sponza.014",
+            "maps": {
+                "albedo": 22
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.5,
+                "roughness": 0.1,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 14,
+            "type": "pbr",
+            "name": "sponza.015",
+            "maps": {
+                "albedo": 23
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 15,
+            "type": "pbr",
+            "name": "sponza.016",
+            "maps": {
+                "albedo": 24
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 16,
+            "type": "pbr",
+            "name": "sponza.017",
+            "maps": {
+                "albedo": 25
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 17,
+            "type": "pbr",
+            "name": "sponza.018",
+            "maps": {
+                "albedo": 26
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 18,
+            "type": "pbr",
+            "name": "sponza.019",
+            "maps": {
+                "albedo": 27
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 19,
+            "type": "pbr",
+            "name": "sponza.020",
+            "maps": {
+                "albedo": 28
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 20,
+            "type": "pbr",
+            "name": "sponza.021",
+            "maps": {
+                "albedo": 29
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.1,
+                "roughness": 0.8,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 21,
+            "type": "pbr",
+            "name": "sponza.022",
+            "maps": {
+                "albedo": 30
+            },
+            "components": ["albedo"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.3,
+                "roughness": 0.4,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 22,
+            "type": "pbr",
+            "name": "sponza.023",
+            "maps": {
+                "albedo": 31,
+                "normal": 32
+            },
+            "components": ["albedo", "normal"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.3,
+                "roughness": 0.3,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        },
+
+        {
+            "id": 23,
+            "type": "pbr",
+            "name": "sponza.024",
+            "maps": {
+                "albedo": 33,
+                "normal": 34
+            },
+            "components": ["albedo", "normal"],
+            "settings": {
+                "albedo": [1.0, 1.0, 1.0],
+                "ambient": [0.3, 0.3, 0.3],
+                "metalness": 0.3,
+                "roughness": 0.3,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "transparency": false
+            }
+        }
+    ],
+
+    "models": [
+        {
+            "id": 0,
+            "name": "sponza.000",
+            "mesh": 0,
+            "mesh_lines": 25,
+            "material": 0,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 1,
+            "name": "sponza.001",
+            "mesh": 1,
+            "mesh_lines": 26,
+            "material": 1,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 2,
+            "name": "sponza.002",
+            "mesh": 2,
+            "mesh_lines": 27,
+            "material": 2,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 3,
+            "name": "sponza.003",
+            "mesh": 3,
+            "mesh_lines": 28,
+            "material": 3,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 4,
+            "name": "sponza.004",
+            "mesh": 4,
+            "mesh_lines": 29,
+            "material": 4,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 5,
+            "name": "sponza.005",
+            "mesh": 5,
+            "mesh_lines": 30,
+            "material": 5,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0],
+            "exclude_from_shadow": false
+        },
+
+        {
+            "id": 6,
+            "name": "sponza.006",
+            "mesh": 6,
+            "mesh_lines": 31,
+            "material": 6,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 7,
+            "name": "sponza.007",
+            "mesh": 7,
+            "mesh_lines": 32,
+            "material": 7,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 8,
+            "name": "sponza.008",
+            "mesh": 8,
+            "mesh_lines": 33,
+            "material": 8,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 9,
+            "name": "sponza.009",
+            "mesh": 9,
+            "mesh_lines": 34,
+            "material": 9,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 10,
+            "name": "sponza.010",
+            "mesh": 10,
+            "mesh_lines": 35,
+            "material": 10,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 11,
+            "name": "sponza.011",
+            "mesh": 11,
+            "mesh_lines": 36,
+            "material": 11,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 12,
+            "name": "sponza.012",
+            "mesh": 12,
+            "mesh_lines": 37,
+            "material": 12,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 13,
+            "name": "sponza.014",
+            "mesh": 14,
+            "mesh_lines": 39,
+            "material": 13,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 15,
+            "name": "sponza.015",
+            "mesh": 15,
+            "mesh_lines": 40,
+            "material": 14,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 16,
+            "name": "sponza.016",
+            "mesh": 16,
+            "mesh_lines": 41,
+            "material": 15,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 17,
+            "name": "sponza.017",
+            "mesh": 17,
+            "mesh_lines": 42,
+            "material": 16,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 18,
+            "name": "sponza.018",
+            "mesh": 18,
+            "mesh_lines": 43,
+            "material": 17,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 19,
+            "name": "sponza.019",
+            "mesh": 19,
+            "mesh_lines": 44,
+            "material": 18,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 20,
+            "name": "sponza.020",
+            "mesh": 20,
+            "mesh_lines": 45,
+            "material": 19,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 21,
+            "name": "sponza.021",
+            "mesh1": 21,
+            "mesh_lines": 46,
+            "material": 20,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 22,
+            "name": "sponza.022",
+            "mesh": 22,
+            "mesh_lines": 47,
+            "material": 21,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 23,
+            "name": "sponza.023",
+            "mesh": 23,
+            "mesh_lines": 48,
+            "material": 22,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 24,
+            "name": "sponza.024",
+            "mesh": 24,
+            "mesh_lines": 49,
+            "material": 23,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun1",
+            "rotation": [0.0, 55.0, 40.0],
+            "color": [1.0, 1.0, 1.0, 1.0],
+            "il": 2.6,
+
+            "shadow": {
+                "type": "pcf_5x5_linear",
+                "depth_bias": 0.0005,
+                "normal_offset": 0.08,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.1,
+                "camera_distance": 30.0,
+                "camera_fov": 15.0,
+                "f_near": 0.1,
+                "f_far": 100.0
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [0.0, 0.0, 10.0],
+            "color": [1.0, 1.0, 1.0, 1.0],
+            "il": 3.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 1.0,
+
+            "shadow": {
+                "type": "linear",
+                "f_near": 0.1,
+                "f_far": 100.0,
+                "radius": 0.1,
+                "depth_bias": 0.0005,
+                "normal_offset": 0.095,
+                "near": 1.0,
+                "far": 100.0
+            }
+        },
+
+        {
+            "type": "point",
+            "position": [0.0, 1.0, 7.0],
+            "color": [1.0, 0.6, 0.3, 1.0],
+            "il": 20.0,
+
+            "kc": 1.0,
+            "kl": 0.5,
+            "kq": 0.1,
+
+            "shadow": {
+                "type": "linear",
+                "f_near": 0.1,
+                "f_far": 100.0,
+                "radius": 0.1,
+                "depth_bias": 0.00075,
+                "normal_offset": 0.0,
+                "near": 1.0,
+                "far": 100.0
+            }
+        },
+
+        {
+            "type": "point",
+            "position": [0.0, -4.0, 7.0],
+            "color": [1.0, 1.0, 1.0, 1.0],
+            "il": 30.0,
+
+            "kc": 1.0,
+            "kl": 0.5,
+            "kq": 0.1,
+
+            "shadow": {
+                "type": "linear",
+                "f_near": 0.1,
+                "f_far": 100.0,
+                "radius": 0.01,
+                "depth_bias": 0.00095,
+                "normal_offset": 0.0,
+                "near": 1.0,
+                "far": 100.0
+            }
+        }
+    ]
+}

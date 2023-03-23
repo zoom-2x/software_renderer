@@ -1,0 +1,483 @@
+{
+    "settings":
+    {
+        "name": "Bezier train animation",
+        "shader": 6,
+        "program": 5,
+
+        "program_settings":
+        {
+            "samples": 30,
+            "lut_samples": 20,
+            "target_fps": 30,
+
+            "trains": [
+                {
+                    "locomotive_meshes": [5, 6, 7],
+                    "wagon_meshes": [8, 9, 10],
+
+                    "locomotive_material": 0,
+                    "wagon_material": 1,
+
+                    "transform": {
+                        "translation": [],
+                        "rotation": [],
+                        "scaling": [0.2, 0.2, 0.2]
+                    },
+
+                    "size": 7,
+
+                    "base_frame_offset": 50,
+                    "locomotive_frame_offset": -10,
+                    "wagon_frame_offset": -10
+                },
+
+                {
+                    "locomotive_meshes": [5, 6, 7],
+                    "wagon_meshes": [8, 9, 10],
+
+                    "locomotive_material": 2,
+                    "wagon_material": 3,
+
+                    "transform": {
+                        "translation": [0.0, 0.0, 0.0],
+                        "rotation": [],
+                        "scaling": [0.2, 0.2, 0.2]
+                    },
+
+                    "size": 10,
+
+                    "base_frame_offset": -250,
+                    "locomotive_frame_offset": -10,
+                    "wagon_frame_offset": -10
+                }
+            ],
+
+            "curves": [
+                {
+                    "name": "Train track",
+
+                    "flags": {
+                        "closed_path": true,
+                        "synchronize": true,
+                        "debug": true,
+                        "debug_lut": false,
+                        "debug_tangents": false,
+                        "debug_points": false,
+                        "reverse": false
+                    },
+
+                    "transform": {
+                        "translation": [0.0, 0.0, 0.0],
+                        "rotation": [0.0, 0.0, 0.0],
+                        "scaling": [1.0, 1.0, 1.0]
+                    },
+
+                    "global_scale": 2.0,
+
+                    "points": [
+                        [6.45024, 1.08513, 0.145696, 6.35447, -0.799804, -0.516009, 6.54601, 2.97006, 0.8074],
+                        [3.14521, -0.121924, 0.101347, 4.10549, -1.04706, -0.664407, 2.20851, 0.780493, 0.848296],
+                        [-0.293058, 0.292619, 0.363534, 0.411879, 1.01988, 0.57636, -1.19123, -0.634007, 0.092367],
+                        [-2.98759, -2.48726, -0.449966, -2.08941, -1.58415, -0.108568, -4.18221, -3.68845, -0.904043],
+                        [-6.73067, -1.75571, 0.290342, -6.62011, -3.1656, 0.290342, -6.84123, -0.345826, 0.290342],
+                        [-4.18245, 0.402351, -0.397339, -5.49304, 0.658324, -0.862999, -2.87186, 0.146378, 0.068321],
+                        [0.011753, -0.524275, -0.653241, -0.881299, -1.44645, -0.595629, 0.893371, 0.386094, -0.710115],
+                        [2.62094, 2.20683, -0.187924, 1.64662, 1.4461, 0.097116, 3.60189, 2.97274, -0.474904]
+                    ]
+                },
+
+                {
+                    "name": "Camera track",
+
+                    "flags": {
+                        "closed_path": true,
+                        "synchronize": true,
+                        "debug": false,
+                        "debug_lut": false,
+                        "debug_tangents": false,
+                        "debug_points": false,
+                        "reverse": true
+                    },
+
+                    "transform": {
+                        "translation": [-4.67217, 0.788807, 0.0],
+                        "rotation": [0.0, 0.0, 0.0],
+                        "scaling": [1.0, 1.0, 1.0]
+                    },
+
+                    "global_scale": 2.0,
+
+                    "points": [
+                        [-2.89343, -2.88065, 0.852305, -3.81479, -1.79796, -0.247954, -2.08137, -3.8349, 1.82204],
+                        [-1.3586, 0.852355, -0.555027, -3.28522, 0.371088, -0.730343, 0.670337, 1.35918, -0.370401],
+                        [0.838083, -1.76337, 1.55463, 0.376999, 0.178538, 1.55463, 1.12886, -2.98801, 1.55463],
+                        [1.89595, -4.32223, 0.0, 1.53599, -4.1139, 0.809177, 2.34993, -4.58497, -1.02052],
+                        [3.01264, -1.81668, -2.04296, 2.55562, -3.99378, -2.04296, 3.54776, 0.732455, -2.04296],
+                        [4.45533, 2.05443, 0.0, 3.81067, 2.51134, -1.28079, 4.82406, 1.79309, 0.732578],
+                        [5.64878, -0.45543, 1.37742, 5.12968, 1.03045, 1.37742, 6.13014, -1.83327, 1.37742],
+                        [6.98037, -2.97496, -0.296052, 6.62045, -3.16496, 0.906313, 7.33324, -2.78868, -1.47487],
+                        [8.49871, 0.317004, -1.80348, 8.05074, -1.11649, -1.80348, 8.92999, 1.69709, -1.80348],
+                        [10.8504, 2.76279, 0.0, 9.49783, 2.92111, -1.46936, 12.1253, 2.61356, 1.38498],
+                        [12.967, -1.41997, 2.10441, 13.1592, 0.348057, 2.10441, 12.6481, -4.35412, 2.10441],
+                        [7.10187, -4.50584, -0.106438, 9.76382, -7.21977, -0.106438, 4.96065, -2.32281, -0.106438],
+                        [1.40682, -4.08753, 2.30984, 3.08086, -5.20004, 2.30984, -0.299395, -2.95364, 2.30984]
+                    ]
+                }
+            ],
+
+            "animations": [
+                {
+                    "name": "Train_0 animation",
+                    "curve": 0,
+                    "frames": 250,
+                    "loop": true,
+
+                    "timescale": 2.0,
+                    "train": 0,
+                    "disabled": false,
+
+                    "targets1": [
+                        { "model": 0, "offset": 0 },
+                        { "model": 1, "offset": -10 },
+                        { "model": 2, "offset": -20 },
+                        { "model": 3, "offset": -30 },
+                        { "model": 4, "offset": -40 },
+                        { "model": 5, "offset": -50 }
+                    ],
+
+                    "keyframes": {
+                        "offset": [
+                            {"frame": 1, "value": 0},
+                            {"frame": 250, "value": 1}
+                        ],
+
+                        "roll": [
+                            {"frame": 1, "value": 40},
+                            {"frame": 30, "value": 40},
+                            {"frame": 50, "value": -40},
+                            {"frame": 65, "value": -40},
+                            {"frame": 120, "value": 50},
+                            {"frame": 150, "value": 50},
+                            {"frame": 175, "value": -30},
+                            {"frame": 190, "value": -30},
+                            {"frame": 210, "value": 40},
+                            {"frame": 250, "value": 40}
+                        ],
+
+                        "horizontal": [],
+                        "vertical": [],
+                        "scaling_x": [],
+                        "scaling_y": []
+                    }
+                },
+
+                {
+                    "name": "Train_1 animation",
+                    "curve": 0,
+                    "frames": 250,
+                    "timescale": 2.0,
+                    "train": 1,
+                    "loop": true,
+                    "disabled": false,
+
+                    "targets1": [{"model": 0, "offset": 0}],
+
+                    "targets1": [
+                        { "model": 0, "offset": 0 },
+                        { "model": 1, "offset": -10 },
+                        { "model": 2, "offset": -20 },
+                        { "model": 3, "offset": -30 },
+                        { "model": 4, "offset": -40 },
+                        { "model": 5, "offset": -50 }
+                    ],
+
+                    "keyframes": {
+                        "offset": [
+                            {"frame": 1, "value": 0},
+                            {"frame": 250, "value": 1}
+                        ],
+
+                        "roll": [
+                            {"frame": 1, "value": 40},
+                            {"frame": 30, "value": 40},
+                            {"frame": 50, "value": -40},
+                            {"frame": 65, "value": -40},
+                            {"frame": 120, "value": 50},
+                            {"frame": 150, "value": 50},
+                            {"frame": 175, "value": -30},
+                            {"frame": 190, "value": -30},
+                            {"frame": 210, "value": 40},
+                            {"frame": 250, "value": 40}
+                        ],
+
+                        "horizontal": [],
+                        "vertical": [],
+                        "scaling_x": [],
+                        "scaling_y": []
+                    }
+                },
+
+                {
+                    "name": "Camera animation",
+                    "curve": 1,
+                    "frames": 250,
+                    "frame_offset": -50,
+                    "timescale": 2.0,
+
+                    "disabled": false,
+                    "use_camera": true,
+                    "follow_path": true,
+                    "loop": true,
+
+                    "follow_object1": 0,
+                    "follow_train": 0,
+
+                    "keyframes": {
+                        "offset": [
+                            {"frame": 1, "value": 0},
+                            {"frame": 250, "value": 1}
+                        ],
+
+                        "roll1": [
+                            {"frame": 1, "value": 0},
+                            {"frame": 50, "value": 45},
+                            {"frame": 100, "value": -45},
+                            {"frame": 150, "value": 60},
+                            {"frame": 250, "value": 0}
+                        ],
+
+                        "heading1": [
+                            {"frame": 1, "value": 0},
+                            {"frame": 100, "value": 180},
+                            {"frame": 250, "value": 360}
+                        ],
+
+                        "horizontal": [],
+                        "vertical": [],
+                        "scaling_x": [],
+                        "scaling_y": []
+                    }
+                }
+            ]
+        },
+
+        "background_color": [0.20, 0.20, 0.20, 1.0],
+        "wireframe_color": [0.407, 0.976, 1.0, 0.40],
+        "ambient_color": [0.2, 0.2, 0.25, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_lights": false,
+        "debug_grid": true,
+        "point_radius": 2,
+
+        "tone_mapping": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping1": "aces_aprox",
+
+        "camera": {
+            "type": "focus",
+            "eye": [0.0, -10.0, 10.0],
+            "target": [4.0, 0.0, 0.0],
+            "wheel_sens": 0.8,
+            "h_sens": 0.5,
+            "v_sens": 0.5,
+            "projection": "perspective",
+            "fov": 50,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": -1.0,
+            "near": 0.1,
+            "far": 500.0
+        },
+
+        "postprocessing": {
+            "enabled": false,
+            "tint": [1.2, 1.2, 1.35]
+        },
+
+        "flags": {
+            "shadow": false,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_solid": false,
+            "mode_material": false
+        }
+    },
+
+    "packages": [
+        "data/assets/meshes/shapes.pkg",
+        "data/assets/meshes/train.pkg"
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/shapes/sphere_low" },
+        { "id": 1, "name": "meshes/shapes/sphere_low_lines" },
+        { "id": 2, "name": "meshes/shapes/plane" },
+        { "id": 3, "name": "meshes/shapes/cube" },
+        { "id": 4, "name": "meshes/shapes/cube_lines" },
+
+        { "id": 5, "name": "meshes/train/train_0" },
+        { "id": 6, "name": "meshes/train/train_0_lines" },
+        { "id": 7, "name": "meshes/train/train_0_points" },
+
+        { "id": 8, "name": "meshes/train/train_1" },
+        { "id": 9, "name": "meshes/train/train_1_lines" },
+        { "id": 10, "name": "meshes/train/train_1_points" },
+    ],
+
+    "materials": [
+        {
+            "id": 0,
+            "type": "pbr",
+            "name": "material 0",
+            "components": [],
+            "settings": {
+                "albedo": [1.0, 0.2, 0.3],
+                "metalness": 0.2,
+                "roughness": 0.2,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 1,
+            "type": "pbr",
+            "name": "material 1",
+            "components": [],
+            "settings": {
+                "albedo": [0.5, 1.0, 0.5],
+                "metalness": 0.0,
+                "roughness": 0.5,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "exclude_from_shadow": true
+            }
+        },
+
+        {
+            "id": 2,
+            "type": "pbr",
+            "name": "material 2",
+            "components": [],
+            "settings": {
+                "albedo": [1.0, 0.0, 0.7],
+                "metalness": 0.2,
+                "roughness": 0.2,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 3,
+            "type": "pbr",
+            "name": "material 3",
+            "components": [],
+            "settings": {
+                "albedo": [0.5, 1.0, 0.5],
+                "metalness": 0.0,
+                "roughness": 0.5,
+                "ao": 1.0,
+                "f0": [0.05, 0.05, 0.05],
+                "m_metalness": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0,
+                "exclude_from_shadow": true
+            }
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun",
+            "rotation": [0.0, 25.0, 45.0],
+            "color": [1.0, 1.0, 1.0, 1.0],
+            "il": 10.0,
+
+            "shadow": {
+                "camera_distance": 10.0,
+                "camera_fov": 10.0,
+                "f_near": 0.1,
+                "f_far": 500.0,
+                "type": "pcf_3x3_linear",
+                "normal_offset": 0.009,
+                "depth_bias": 0.00015,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [5.0, 0.0, 5.0],
+            "color": [1.0, 0.437, 0.474, 1.0],
+            "il": 200.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "linear",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [-0.4, -3.3, 0.2],
+            "color": [0.628, 0.419, 1.0, 1.0],
+            "il": 200.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [0.5, -2.0, -2.0],
+            "color": [0.128, 0.719, 0.921, 1.0],
+            "il": 100.0,
+
+            "kc": 1.0,
+            "kl": 1.0,
+            "kq": 2.0,
+
+            "shadow": {
+                "type": "basic",
+                "normal_offset": 0.02,
+                "depth_bias": 0.0003,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        }
+    ]
+}

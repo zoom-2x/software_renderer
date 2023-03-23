@@ -1,0 +1,46 @@
+{
+    "res_width": 1280,
+    "res_height": 800,
+    "res_scaling": 1,
+    "fps": 0,
+
+    "debug_grid":
+    {
+        "base_color": [1.0, 1.0, 1.0, 0.02],
+        "x_color": [1.0, 0.0, 0.0, 0.1],
+        "y_color": [0.0, 1.0, 0.0, 0.1],
+        "z_color": [0.0, 0.0, 1.0, 0.1],
+        "step": 0.5,
+        "rows": 20,
+        "cols": 20,
+        "z_axis_height": 10
+    },
+
+    "level1": "blinn/african_head.json",
+    "level1": "blinn/chest.json",
+    "level1": "blinn/statue_head.json",
+    "level1": "blinn/headscan.json",
+    "level": "blinn/craftsman.json",
+    "level1": "blinn/reflections_refractions.json",
+
+    "level1": "pbr/spheres.json",
+    "level1": "pbr/torus.json",
+    "level1": "pbr/torus_transparency.json",
+    "level1": "pbr/african_head.json",
+    "level1": "pbr/cerberus.json",
+    "level1": "pbr/helmet.json",
+    "level1": "pbr/angry_dragon.json",
+    "level1": "pbr/angry_dragon_na.json",
+    "level1": "pbr/cyberpunk_car.json",
+    "level1": "pbr/drake_pistol.json",
+    "level1": "pbr/headscan.json",
+    "level1": "pbr/statue_head.json",
+    "level1": "pbr/chest.json",
+    "level1": "pbr/wolf_mask.json",
+    "level1": "pbr/waves.json",
+    "level1": "pbr/waves_sphere.json",
+    "level1": "pbr/text_panel.json",
+    "level1": "pbr/text_panel_extrude.json",
+    "level1": "pbr/bezier_train.json",
+    "level1": "pbr/sponza.json",
+}

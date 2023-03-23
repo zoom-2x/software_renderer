@@ -1,0 +1,211 @@
+{
+    "settings":
+    {
+        "name": "Statue head",
+
+        "shader": 6,
+        "program": 6,
+
+        "program_settings": {
+            "min_radius": 4.0,
+            "max_radius": 5.0,
+            "min_height": -0.5,
+            "max_height": 1.5,
+            "rotation_speed": 10.0,
+            "radius_speed": 8.0,
+            "height_speed": 9.0,
+            "angle_offset": -60.0
+        },
+
+        "background_color": [0.10, 0.10, 0.10, 1.0],
+        "wireframe_color": [0.407, 0.976, 1.0, 0.20],
+        "ambient_color": [0.3, 0.3, 0.4, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_grid": false,
+        "debug_lights": false,
+
+        "tone_mapping1": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping": "aces_aprox",
+
+        "camera": {
+            "type": "focus",
+            "eye": [4.0, -3.0, 2.0],
+            "target": [0.0, 0.0, 1.5],
+            "wheel_sens": 0.2,
+            "projection": "perspective",
+            "fov": 50,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": -1.0,
+            "near": 0.1,
+            "far": 40.0
+        },
+
+        "postprocessing": {
+            "enabled": false,
+            "tint": [1.2, 1.2, 1.35]
+        },
+
+        "flags": {
+            "shadow": false,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_solid": false,
+            "mode_material": false
+        }
+    },
+
+    "packages": [
+        "data/assets/textures/common.pkg",
+        "data/assets/textures/statue_head.pkg",
+        "data/assets/textures/hdr_venice.pkg",
+        "data/assets/textures/hdr_newport.pkg",
+        "data/assets/meshes/statues.pkg",
+        "data/assets/meshes/shapes.pkg"
+    ],
+
+    "textures": [
+        {
+            "id": 0,
+            "name": "textures/statue_head/diffuse",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+        {
+            "id": 1,
+            "name": "textures/common/marble_normal",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+        {
+            "id": 2,
+            "name": "textures/statue_head/ao",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        },
+        {
+            "id": 3,
+            "type": "pbr_ambient",
+            "comment": "You can switch between the two hdr ambients.",
+            "name1": "textures/hdr_venice/venice_sunset",
+            "name": "textures/hdr_newport/newport_loft",
+            "wrap": "clamp",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        }
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/statues/statue_head" },
+        { "id": 1, "name": "meshes/shapes/skybox" },
+        { "id": 2, "name": "meshes/statues/statue_head_lines" }
+    ],
+
+    "materials": [
+        {
+            "id": 0,
+            "type": "pbr",
+            "name": "basic material",
+            "maps": {
+                "albedo": 0,
+                "normal": 1,
+                "ao": 2,
+                "ambient": 3
+            },
+            "components": ["albedo", "normal", "ao", "ambient"],
+            "settings": {
+                "albedo": [0.4, 0.43, 0.7],
+                "ambient": [0.27, 0.23, 0.23],
+                "metalness": 0.2,
+                "roughness": 0.35,
+                "ao": 0.2,
+                "f0": [0.01, 0.01, 0.01],
+                "m_metallic": 1.0,
+                "m_roughness": 1.0,
+                "m_ao": 1.0,
+                "m_specular": 1.0
+            }
+        },
+
+        {
+            "id": 1,
+            "type": "skybox",
+            "name": "skybox material",
+            "input": 3
+        }
+    ],
+
+    "models": [
+        {
+            "id": 0,
+            "mesh": 0,
+            "mesh_lines": 2,
+            "material": 0,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "id": 1,
+            "name": "skybox",
+            "mesh": 1,
+            "material": 1,
+            "shader": 13,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [2.0, 2.0, 2.0]
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun1",
+            "rotation": [0.0, 45.0, 45.0],
+            "color": [1.0, 0.730, 0.584, 1.0],
+            "il": 2.0,
+
+            "shadow": {
+                "camera_distance": 10.0,
+                "camera_fov": 10.0,
+                "f_near": 1.0,
+                "f_far": 100.0,
+                "type": "pcf_3x3_linear",
+                "normal_offset": 0.1,
+                "depth_bias": 0.0001,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [2.5, 1.0, 2.0],
+            "color": [1.0, 0.530, 0.184, 1.0],
+            "il": 15.0,
+
+            "kc": 1,
+            "kl": 1.0,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "linear",
+                "radius": 0.005,
+                "normal_offset": 0.05,
+                "depth_bias": 0.0001,
+                "vsm_bias": 0.0010,
+                "light_bleed_reduction": 0.8
+            }
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+{
+    "settings":
+    {
+        "name": "Reflections / refractions",
+
+        "shader": 11,
+        "program": 6,
+
+        "program_settings": {
+            "min_radius": 2.5,
+            "max_radius": 3.5,
+            "min_height": -1.0,
+            "max_height": 1.0,
+            "rotation_speed": 10.0,
+            "radius_speed": 8.0,
+            "height_speed": 9.0,
+            "angle_offset": -60.0
+        },
+
+        "background_color": [0.10, 0.10, 0.10, 1.0],
+        "wireframe_color": [1.0, 1.0, 1.0, 0.1],
+        "ambient_color": [0.3, 0.3, 0.4, 1.0],
+        "shadow_map_size": 1024,
+
+        "debug_grid": false,
+        "debug_lights": false,
+
+        "tone_mapping1": "reinhard",
+        "tone_mapping1": "filmic",
+        "tone_mapping": "aces_aprox",
+
+        "camera": {
+            "type": "focus",
+            "eye": [0.0, -4.0, 0.0],
+            "target": [0.0, 0.0, 0.0],
+            "wheel_sens": 0.2,
+            "projection": "perspective",
+            "fov": 50,
+            "top": 1.0,
+            "bottom": -1.0,
+            "left": -1.0,
+            "right": -1.0,
+            "near": 0.1,
+            "far": 40.0
+        },
+
+        "postprocessing": {
+            "enabled": false,
+            "tint": [1.2, 1.2, 1.35]
+        },
+
+        "flags": {
+            "shadow": false,
+            "mode_normal": true,
+            "mode_wireframe": false,
+            "mode_solid": false,
+            "mode_material": false
+        }
+    },
+
+    "packages": [
+        "data/assets/textures/cubemaps.pkg",
+        "data/assets/meshes/shapes.pkg",
+        "data/assets/meshes/common.pkg",
+        "data/assets/meshes/statues.pkg"
+    ],
+
+    "textures": [
+        {
+            "id": 0,
+            "type": "cubemap",
+            "name": "textures/cubemaps/ocean_skybox",
+            "wrap": "mirror",
+            "filter": true,
+            "mip": true,
+            "mip_filter": true
+        }
+    ],
+
+    "meshes": [
+        { "id": 0, "name": "meshes/shapes/sphere" },
+        { "id": 1, "name": "meshes/shapes/torus_knot" },
+        { "id": 2, "name": "meshes/common/monkey" },
+        { "id": 3, "name": "meshes/statues/statue_head" },
+        { "id": 4, "name": "meshes/shapes/skybox" }
+    ],
+
+    "materials": [
+        {
+            "id": 0,
+            "type": "blinn",
+            "name": "basic material",
+            "maps": {
+                "cubemap": 0
+            },
+            "components": ["reflection", "refraction"],
+            "settings": {
+                "specular": 3.0,
+                "shininess": 200.0,
+                "diffuse_color": [1.0, 0.0, 0.0],
+                "min_fresnel": 0.75,
+                "max_fresnel": 20.0,
+                "rr_diffuse_ratio": 1.0,
+                "refr_idx1": 1.0,
+                "refr_idx2": 1.05,
+                "rr_ratio": 0.5
+            }
+        },
+
+        {
+            "id": 1,
+            "type": "skybox",
+            "name": "skybox material",
+            "input": 0
+        }
+    ],
+
+    "models": [
+        {
+            "comment": "You can change the mesh index [0-3]",
+            "mesh": 1,
+            "material": 0,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [1.0, 1.0, 1.0]
+        },
+
+        {
+            "name": "skybox",
+            "mesh": 4,
+            "material": 1,
+            "shader": 12,
+            "position": [0.0, 0.0, 0.0],
+            "rotation": [0.0, 0.0, 0.0],
+            "scaling": [2.0, 2.0, 2.0],
+            "exclude_from_shadow": true
+        }
+    ],
+
+    "lights": [
+        {
+            "type": "sun",
+            "rotation": [0.0, 45.0, 130.0],
+            "color": [1.0, 0.730, 0.584, 1.0],
+            "il": 2.0,
+
+            "shadow": {
+                "camera_distance": 10.0,
+                "camera_fov": 10.0,
+                "f_near": 1.0,
+                "f_far": 100.0,
+                "type": "pcf_3x3_linear",
+                "normal_offset": 0.1,
+                "depth_bias": 0.0001,
+            }
+        },
+
+        {
+            "type": "point1",
+            "position": [2.5, 1.0, 2.0],
+            "color": [1.0, 0.530, 0.184, 1.0],
+            "il": 15.0,
+
+            "kc": 1,
+            "kl": 1.0,
+            "kq": 0.5,
+
+            "shadow": {
+                "type": "linear",
+                "radius": 0.005,
+                "normal_offset": 0.05,
+                "depth_bias": 0.0001,
+            }
+        }
+    ]
+}
