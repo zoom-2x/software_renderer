@@ -72,9 +72,6 @@ The new assets need to be added in the file **data/package/asset_builder_config.
 * Wolf mask: https://skfb.ly/ooEBH
 * Angry dragon: https://skfb.ly/6QWXF
 * Drake pistol: https://skfb.ly/6xCGp
-* Space station: https://skfb.ly/69FVn
-* Spaceship: https://skfb.ly/NL8I
-* Asteroids: https://skfb.ly/KZPD
 
 ## Skybox textures and HDR textures:
 
