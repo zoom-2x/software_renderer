@@ -4,7 +4,7 @@
         "name": "Torus",
 
         "shader": 6,
-        "program": 6,
+        "program": 0,
 
         "program_settings": {
             "min_radius": 2.5,

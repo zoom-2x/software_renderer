@@ -706,10 +706,6 @@ engine_api_t *get_engine_api(engine_core_t *output_core)
 {
     GCSR.core = output_core;
 
-    // #ifdef GC_DEBUG_MODE
-    // __DebugApi__ = &GCSR.core->API.DebugApi;
-    // #endif
-
     global_export_api.render_and_update = render_and_update;
     GCSR.global_dll_reloaded = true;
 
