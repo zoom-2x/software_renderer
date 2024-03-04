@@ -39,9 +39,9 @@ ECHO ---------------------------------------------------------------------------
 DEL /Q bin\clang
 MKDIR bin\clang
 
-CP build\clang\software_renderer.exe bin\clang
-CP build\clang\asset_builder.exe bin\clang
-CP build\clang\gcsr_engine_core.dll bin\clang
+COPY build\clang\software_renderer.exe bin\clang
+COPY build\clang\asset_builder.exe bin\clang
+COPY build\clang\gcsr_engine_core.dll bin\clang
 
 ECHO ---------------------------------------------------------------------------
 ECHO Finished [%date% %time%]

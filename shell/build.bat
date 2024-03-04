@@ -42,9 +42,9 @@ ECHO ---------------------------------------------------------------------------
 DEL /Q bin\msvc
 MKDIR bin\msvc
 
-CP build\msvc\software_renderer.exe bin\msvc
-CP build\msvc\asset_builder.exe bin\msvc
-CP build\msvc\gcsr_engine_core.dll bin\msvc
+COPY build\msvc\software_renderer.exe bin\msvc
+COPY build\msvc\asset_builder.exe bin\msvc
+COPY build\msvc\gcsr_engine_core.dll bin\msvc
 
 ECHO ---------------------------------------------------------------------------
 ECHO Finished [%date% %time%]
