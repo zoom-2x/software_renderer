@@ -1,5 +1,7 @@
 ﻿# Software Renderer
 
+![Software Renderer](images/readme.jpg)
+
 Software renderer written in c/c++ (SDL) for Windows that started from Casey Muratori's Handmade Hero Project https://handmadehero.org/.
 
 Preview: https://www.deviantart.com/zoom-2x
